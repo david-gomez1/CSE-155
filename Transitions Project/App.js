@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Alert, Animated, AppRegistry, Button, StyleSheet, Text, View } from 'react-native';
-import { createStackNavigator, createAppContainer } from 'react-navigation';
+import { StackNavigator, createStackNavigator, createAppContainer} from 'react-navigation';
 
-//import HomeScreen from './HomeScreen'
-//import ProfileScreen from './ProfileScreen'
-//import AccountScreen from './AccountScreen'
+import LoginScreen from './screens/LoginScreen'
+
+import HomeScreen from './screens/HomeScreen'
+import ProfileScreen from './screens/ProfileScreen'
 
 /*const SimpleApp = StackNavigator({
     Home: { screen: HomeScreen },
@@ -15,82 +16,110 @@ import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 AppRegistry.registerComponent('SimpleApp', () => SimpleApp)
 */
+//-----------------testing--------------------------------
+// let AppScenes = {
+//     Home: HomeScreen,
+//     Profile: ProfileScreen
+// }
+// let MyTransition = (index, position) => {
+//     const inputRange = [index - 1, index, index + 1];
+//     const outputRange = [.8, 1, 1];
+//     const opacity = position.interpolate({
+//         inputRange,
+//         outputRange,
+//     });
+//
+//     const scaleY = position.interpolate({
+//         inputRange,
+//         outputRange,
+//     });
+//
+//     return {
+//         opacity,
+//         transform: [
+//             {scaleY}
+//         ]
+//     };
+// };
+//
+// let TransitionConfiguration = () => {
+//     return {
+//         // Define scene interpolation, eq. custom transition
+//         screenInterpolator: (sceneProps) => {
+//             const {position, scene} = sceneProps;
+//             const {index} = scene;
+//
+//             return MyTransition(index, position);
+//         }
+//     }
+// };
+//
+// const AppNavigator = createStackNavigator({
+//     Home: HomeScreen,
+//     Profile: ProfileScreen,
+// }, {
+//     initialRouteName: 'Home',
+//
+//     //transitionConfig: TransitionConfiguration
+// });
+//
+// export default class App extends React.Component {
+//     render() {
+//         return (
+//             <View>
+//                 <AppNavigator/>
+//             </View>
+//         );
+//     }
+// }
+// AppRegistry.registerComponent('MyApp', () => App);
+//--------------------------------------------------------------
 
-class HomeScreen extends React.Component {
-    render() {
-        return (
-            <View style={styles.container}>
-                <Text style={styles.red}>
-                    This is the HomeScreen
-                </Text>
-                <Button onPress={() => this.props.navigation.navigate('Profile')} title="Go to Profile"/>
-
-            </View>
-        );
-    }
-}
-
-class ProfileScreen extends React.Component {
-    render() {
-        return (
-            <View style={styles.container}>
-                <Text style={styles.red}>
-                    This is the ProfileScreen
-                </Text>
-                <Button onPress={() => this.props.navigation.navigate('Home')} title="Go to Home">
-                </Button>
-            </View>
-        );
-    }
-}
-
+//-----------------working code-------------------------------
 const AppNavigator = createStackNavigator({
-    Home: {screen: HomeScreen,},
-    Profile: {screen: ProfileScreen,}
+    Home: HomeScreen,
+    Profile: ProfileScreen
 }, {
-    transitionConfig
+    //transitionConfig
 });
 
+const App = createAppContainer(AppNavigator);
+export default App;
+//-----------------------------------------------------------
 
-export default createAppContainer(AppNavigator);
-
-
-/*export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style = {styles.red}>
-            Hello world!
-        </Text>
-        <Button
-          onPress={()=>{
-            Alert.alert('You tapped the button!');
-          }}
-          title="Press Me"
-         />
-      </View>
-    );
-  }
-}*/
+//--------------------------davids video thing----------------
+// export default class App extends React.Compnent{
+//     render() {
+//         return(
+//             <AppStackNavigator />
+//         );
+//     }
+// }
+// const AppStackNavigator = createStackNavigator({
+//     Login:{
+//         screen:LoginScreen
+//     }
+// })
+//-------------------------------------------------------
 
 const toIndex = 1
 const position = new Animated.Value(0)
-const scenes = [{ index: 0, ...scene0Data }, { index: 1, ...scene1Data }]
+//const scenes = [{ index: 0, ...scene0Data }, { index: 1, ...scene1Data }]
 
 // call screenInterpolator with each scene.
 // The return value is used to configure its transition
 // animation style (translation, opacity, etc)
 
-scenes.forEach(scene => {
+//scenes.forEach(scene => {
 
-    scene.style = screenInterpolator({
-        index: toIndex,
-        position: position,
-        scene: scene, // <-- Each scene/route on the stack is configured separately
-        scenes: scenes,
-    })
-
-})
+//     scene.style = screenInterpolator({
+//         index: toIndex,
+//         position: position,
+//         scene: scene, // <-- Each scene/route on the stack is configured separately
+//         scenes: scenes,
+//     })
+//
+//})
 
 // Transition animation takes place
 Animated.timing(position, {
@@ -99,12 +128,12 @@ Animated.timing(position, {
 
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
     bigblue: {
         color: 'blue',
         fontWeight: 'bold',
@@ -115,29 +144,27 @@ const styles = StyleSheet.create({
     },
 });
 
-const transitionConfig = () => {
-    return {
-        transitionSpec: {
-            duration: 750,
-            easing: Easing.out(Easing.poly(4)),
-            timing: Animated.timing,
-            useNativeDriver: true,
-        },
-        screenInterpolator: sceneProps => {
-            const { layout, position, scene } = sceneProps
-
-            const thisSceneIndex = scene.index
-            const width = layout.initWidth
-
-            const translateX = position.interpolate({
-                inputRange: [thisSceneIndex - 1, thisSceneIndex],
-                outputRange: [width, 0],
-            })
-
-            return { transform: [ { translateX } ] }
-        },
-    }
-}
-
-
+// const transitionConfig = () => {
+//     return {
+//         transitionSpec: {
+//             duration: 750,
+//             easing: Easing.out(Easing.poly(4)),
+//             timing: Animated.timing,
+//             useNativeDriver: true,
+//         },
+//         screenInterpolator: sceneProps => {
+//             const { layout, position, scene } = sceneProps
+//
+//             const thisSceneIndex = scene.index
+//             const width = layout.initWidth
+//
+//             const translateX = position.interpolate({
+//                 inputRange: [thisSceneIndex - 1, thisSceneIndex],
+//                 outputRange: [width, 0],
+//             })
+//
+//             return { transform: [ { translateX } ] }
+//         },
+//     }
+// }
 
