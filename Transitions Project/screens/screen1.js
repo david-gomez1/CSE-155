@@ -14,7 +14,7 @@ class FadeInView extends React.Component {
             this.state.fadeAnim,            // The animated value to drive
             {
                 toValue: 1,                   // Animate to opacity: 1 (opaque)
-                duration: 250,              // Make it take a while
+                duration: 750,              // Make it take a while
             }
         ).start();                        // Starts the animation
     }
@@ -36,15 +36,15 @@ class FadeInView extends React.Component {
 }
 
 
-class ProfileScreen extends React.Component {
+class screen1 extends React.Component {
     render() {
         return (
             <View style={styles.container}>
                 <FadeInView style={{width:400, height:600, backgroundColor:'powderblue'}}>
                     <Text style={styles.red}>
-                        This is the ProfileScreen
+                        This is the Screen1
                     </Text>
-                    <Button onPress={() => this.props.navigation.navigate('Home')} title="Go to Home">
+                    <Button onPress={() => this.props.navigation.navigate('secondScreen')} title="Go to Second Screen">
                     </Button>
                 </FadeInView>
             </View>
@@ -52,7 +52,7 @@ class ProfileScreen extends React.Component {
     }
 }
 
-export default ProfileScreen;
+export default screen1;
 
 
 const styles = StyleSheet.create({

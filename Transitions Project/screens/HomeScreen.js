@@ -2,6 +2,12 @@ import { Animated, View, Text, StyleSheet, Button, AppRegistry } from 'react-nat
 import App from '../App';
 import React, { Component } from "react";
 //import {Button} from "../App";
+import Button1 from './Button1'
+import Button2 from './Button2'
+import Button3 from './Button3'
+import Button4 from './Button4'
+import Button5 from './Button5'
+
 
 class FadeInView extends React.Component {
     state = {
@@ -36,6 +42,41 @@ class FadeInView extends React.Component {
 
 
 class HomeScreen extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+            speedCount: 0
+        }
+    }
+    setSpeed1 = () => {
+        this.setState({ speedCount: 1000});
+        //this.setState((prevState) => ({ 'speedCount': prevState.speedCount +1}))
+    }
+    setSpeed2 = () => {
+        this.setState({ speedCount: 750});
+        //this.setState((prevState) => ({ 'speedCount': prevState.speedCount +1}))
+    }
+    setSpeed3 = () => {
+        this.setState({ speedCount: 500});
+        //this.setState((prevState) => ({ 'speedCount': prevState.speedCount +1}))
+    }
+    setSpeed4 = () => {
+        this.setState({ speedCount: 250});
+        //this.setState((prevState) => ({ 'speedCount': prevState.speedCount +1}))
+    }
+    setSpeed5 = () => {
+        this.setState({ speedCount: 50});
+        //this.setState((prevState) => ({ 'speedCount': prevState.speedCount +1}))
+    }
+
+    // render() {
+    //     return (
+    //         <View style={styles.container}>
+    //             <Button1 onPress = {this.addSpeed}/>
+    //             <Text>{this.state.speedCount}</Text>
+    //         </View>
+    //     );
+    // }
     render() {
         return (
             <View style={styles.container}>
@@ -43,8 +84,12 @@ class HomeScreen extends React.Component {
                     <Text style={styles.red}>
                         This is the HomeScreen
                     </Text>
-                    <Button onPress={() => this.props.navigation.navigate('Profile')} title="Go to Profile"/>
+                    <Button onPress={() => this.props.navigation.navigate('firstScreen')} title="Go to screen1"/>
                 </FadeInView>
+                <Text>{this.state.speedCount}</Text>
+
+                <Button1 onPress = {this.setSpeed1}/>
+                <Button2 onPress = {this.setSpeed2}/>
             </View>
         );
     }

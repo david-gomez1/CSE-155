@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 import { Alert, Animated, AppRegistry, Button, StyleSheet, Text, View } from 'react-native';
 import { StackNavigator, createStackNavigator, createAppContainer} from 'react-navigation';
 
-import LoginScreen from './screens/LoginScreen'
-
 import HomeScreen from './screens/HomeScreen'
-import ProfileScreen from './screens/ProfileScreen'
-
+import screen1 from './screens/screen1'
+import screen2 from './screens/screen2'
 /*const SimpleApp = StackNavigator({
     Home: { screen: HomeScreen },
     Profile: { screen: ProfileScreen },
@@ -76,15 +74,19 @@ AppRegistry.registerComponent('SimpleApp', () => SimpleApp)
 //--------------------------------------------------------------
 
 //-----------------working code-------------------------------
+
+
+
 const AppNavigator = createStackNavigator({
     Home: HomeScreen,
-    Profile: ProfileScreen
+    firstScreen: screen1,
+    secondScreen: screen2
 }, {
     //transitionConfig
 });
 
 const App = createAppContainer(AppNavigator);
-export default App;
+export default App
 //-----------------------------------------------------------
 
 //--------------------------davids video thing----------------
