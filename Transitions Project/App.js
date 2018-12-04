@@ -1,17 +1,26 @@
 import React, { Component } from 'react';
 import { Alert, Animated, AppRegistry, Button, StyleSheet, Text, View } from 'react-native';
-import { StackNavigator, createStackNavigator, createAppContainer} from 'react-navigation';
+import { createStackNavigator, createAppContainer} from 'react-navigation';
+import FadeInView from 'react-native-fade-in-view';
 
-import HomeScreen from './screens/HomeScreen'
-import screen1 from './screens/screen1'
-import screen2 from './screens/screen2'
+// import HomeScreen from './screens/HomeScreen'
+// import screen1 from './screens/screen1'
+// import screen2 from './screens/screen2'
+import Button1 from './screens/Button1'
+import Button2 from './screens/Button2'
+import Button3 from './screens/Button3'
+import Button4 from './screens/Button4'
+import Button5 from './screens/Button5'
+// import Button3 from './Button3'
+// import Button4 from './Button4'
+// import Button5 from './Button5'
+
 /*const SimpleApp = StackNavigator({
     Home: { screen: HomeScreen },
     Profile: { screen: ProfileScreen },
 }, {
     initialRoutName: 'Home',
-});k
-
+});
 AppRegistry.registerComponent('SimpleApp', () => SimpleApp)
 */
 //-----------------testing--------------------------------
@@ -74,19 +83,307 @@ AppRegistry.registerComponent('SimpleApp', () => SimpleApp)
 //--------------------------------------------------------------
 
 //-----------------working code-------------------------------
+// class FadeInView extends React.Component {
+//
+//     state = {
+//         fadeAnim: new Animated.Value(0),  // Initial value for opacity: 0
+//     }
+//
+//     componentDidMount() {
+//         Animated.timing(                  // Animate over time
+//             this.state.fadeAnim,            // The animated value to drive
+//             {
+//                 toValue: 1,                   // Animate to opacity: 1 (opaque)
+//                 duration: this.state.speedCount,              // Make it take a while
+//             }
+//         ).start();                        // Starts the animation
+//     }
+//
+//     render() {
+//         let { fadeAnim } = this.state;
+//
+//         return (
+//             <Animated.View                 // Special animatable View
+//                 style={{
+//                     ...this.props.style,
+//                     opacity: fadeAnim,         // Bind opacity to animated value
+//                 }}
+//             >
+//                 {this.props.children}
+//             </Animated.View>
+//         );
+//     }
+// }
+
+// class FadeInView extends React.Component {
+//     state = {
+//         fadeAnim: new Animated.Value(0),  // Initial value for opacity: 0
+//     }
+//
+//     componentDidMount() {
+//         Animated.timing(                  // Animate over time
+//             this.state.fadeAnim,            // The animated value to drive
+//             {
+//                 toValue: 1,                   // Animate to opacity: 1 (opaque)
+//                 duration: this.state.speedCount,              // Make it take a while
+//             }
+//         ).start();                        // Starts the animation
+//     }
+//
+//     render() {
+//         let { fadeAnim } = this.state;
+//
+//         return (
+//             <Animated.View                 // Special animatable View
+//                 style={{
+//                     ...this.props.style,
+//                     opacity: fadeAnim,         // Bind opacity to animated value
+//                 }}
+//             >
+//                 {this.props.children}
+//             </Animated.View>
+//         );
+//     }
+// }
+
+class HomeScreen extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+            speedCount: 50
+        };
+    }
+
+    setSpeed1 = () => {
+        this.setState({ speedCount: 10000});
+        //this.setState((prevState) => ({ 'speedCount': prevState.speedCount +1}))
+    }
+    setSpeed2 = () => {
+        this.setState({ speedCount: 250});
+        //this.setState((prevState) => ({ 'speedCount': prevState.speedCount +1}))
+    }
+    setSpeed3 = () => {
+        this.setState({ speedCount: 500});
+        //this.setState((prevState) => ({ 'speedCount': prevState.speedCount +1}))
+    }
+    setSpeed4 = () => {
+        this.setState({ speedCount: 250});
+        //this.setState((prevState) => ({ 'speedCount': prevState.speedCount +1}))
+    }
+    setSpeed5 = () => {
+        this.setState({ speedCount: 50});
+        //this.setState((prevState) => ({ 'speedCount': prevState.speedCount +1}))
+    }
+
+    render() {
+        return(
+            <View style={styles.container}>
+                <Text style={styles.title}>{"\n"}CSE 155 mini review!</Text>
+                
+
+                <Text>Speed: {this.state.speedCount}</Text>
+
+                <View style={{
+                  padding:10,
+                  borderRadius: 6,
+                  height:60,
+                  width: "60%",
+                  justifyContent: 'space-between',
+                  marginBottom:100,
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  shadowRadius:20,
+                  backgroundColor:'Blue',
+                  flexDirection:'row'
+                }}>
+                <Button1 onPress={() => {
+                        this.props.navigation.navigate('firstScreen',
+                            {
+                                speedCount: 0
+                            });
+                    }
+                    }
+                    title="speed 1"
+                />
+                <Button2 onPress={() => {
+                        this.props.navigation.navigate('firstScreen',
+                            {
+                                speedCount: 500
+                            });
+                    }
+                    }
+                    title="500"
+                />
+                <Button3 onPress={() => {
+                        this.props.navigation.navigate('firstScreen',
+                            {
+                                speedCount: 750
+                            });
+                    }
+                    }
+                    title="750"
+                />
+                <Button4 onPress={() => {
+                        this.props.navigation.navigate('firstScreen',
+                            {
+                                speedCount: 10000
+                            });
+                    }
+                    }
+                    title="1300"
+                />
+                <Button5 onPress={() => {
+                        this.props.navigation.navigate('firstScreen',
+                            {
+                                speedCount: 200
+                            });
+                    }
+                    }
+                    title="1600"
+                />
+                </View>
+            </View>
+        );
+    }
+}
+
+class screen1 extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+            speedCount2: 50
+        };
+    }
+    setSpeed1 = () => {
+        this.setState({ speedCount2: 10000});
+        //this.setState((prevState) => ({ 'speedCount': prevState.speedCount +1}))
+    }
+    setSpeed2 = () => {
+        this.setState({ speedCount2: 250});
+        //this.setState((prevState) => ({ 'speedCount': prevState.speedCount +1}))
+    }
+    render() {
+        const { navigation } = this.props
+        const speedCount = navigation.getParam('speedCount');
+
+        return (
+          //Copy from here  
+                <FadeInView
+                    duration={speedCount}
+                    //change width and style if needed
+                    style={{width:358, height:630}}
+                >
+
+                <View style={styles.container}>
+                   <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <View style={{
+                  padding:10,
+                  borderRadius: 6,
+                  height:60,
+                  width: "60%",
+                  justifyContent: 'space-between',
+                  marginBottom:50,
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  shadowRadius:20,
+                  backgroundColor:'Blue',
+                  flexDirection:'row'
+                }}>
+                <Button1 onPress={() => {
+                        this.props.navigation.navigate('secondScreen',
+                            {
+                                speedCount: 0
+                            });
+                    }
+                    }
+                    title="speed 1"
+                />
+                <Button2 onPress={() => {
+                        this.props.navigation.navigate('secondScreen',
+                            {
+                                speedCount: 500
+                            });
+                    }
+                    }
+                    title="500"
+                />
+                <Button3 onPress={() => {
+                        this.props.navigation.navigate('secondScreen',
+                            {
+                                speedCount: 750
+                            });
+                    }
+                    }
+                    title="750"
+                />
+                <Button4 onPress={() => {
+                        this.props.navigation.navigate('secondScreen',
+                            {
+                                speedCount: 1300
+                            });
+                    }
+                    }
+                    title="1300"
+                />
+                <Button5 onPress={() => {
+                        this.props.navigation.navigate('secondScreen',
+                            {
+                                speedCount: 1600
+                            });
+                    }
+                    }
+                    title="1600"
+                />
+                </View>
+            
+                </View>
+            </FadeInView>
+        );
+    }
+}
+
+class screen2 extends React.Component {
+
+    render() {
+        const { navigation } = this.props
+        const speedCount = navigation.getParam('speedCount');
+
+        return (
+            <View style={styles.container}>
+                <FadeInView
+                    duration={speedCount}
+                    style={{width:400, height:600, backgroundColor:'powderblue'}}
+                >
+                    <Text>Screen 2</Text>
+                    <Button
+                        onPress={() => this.props.navigation.navigate('Home')}
+                        title="Go to HomeScreen"
+                    />
+                </FadeInView>
+            </View>
+        );
+    }
+}
 
 
 
-const AppNavigator = createStackNavigator({
-    Home: HomeScreen,
-    firstScreen: screen1,
-    secondScreen: screen2
-}, {
-    //transitionConfig
-});
 
-const App = createAppContainer(AppNavigator);
-export default App
+
+
+const AppNavigator = createStackNavigator(
+    {
+        //Main: App,
+        Home: HomeScreen,
+        firstScreen: screen1,
+        secondScreen: screen2
+    },
+    {
+        initialRouteName: "Home"
+    }
+);
+
+export default createAppContainer(AppNavigator);
+
 //-----------------------------------------------------------
 
 //--------------------------davids video thing----------------
@@ -128,23 +425,35 @@ Animated.timing(position, {
     toValue: toIndex,
 }).start()
 
-
+//styles for page 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    bigblue: {
-        color: 'blue',
-        fontWeight: 'bold',
-        fontSize: 30,
-    },
-    red: {
-        color: 'red',
-    },
-});
+  container: {
+    backgroundColor: 'rgb(32,53,70)',
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  title: {
+    fontWeight: "bold",
+    fontFamily: "monospace",
+    fontSize: 40,
+    color: "white",
+    marginBottom: 350,
+    marginTop: 40,
+    textAlign:"center",
+  },
+
+  text:{
+     fontWeight: "bold",
+    fontFamily: "monospace",
+    fontSize: 20,
+    color: "white",
+    marginBottom: 350,
+    marginTop: 40,
+    textAlign:"center",
+
+  }
+})
 
 // const transitionConfig = () => {
 //     return {
@@ -169,4 +478,3 @@ const styles = StyleSheet.create({
 //         },
 //     }
 // }
-
