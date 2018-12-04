@@ -8,9 +8,9 @@ import FadeInView from 'react-native-fade-in-view';
 // import screen2 from './screens/screen2'
 import Button1 from './screens/Button1'
 import Button2 from './screens/Button2'
-// import Button3 from './Button3'
-// import Button4 from './Button4'
-// import Button5 from './Button5'
+import Button3 from './screens/Button3'
+import Button4 from './screens/Button4'
+import Button5 from './screens/Button5'
 
 /*const SimpleApp = StackNavigator({
     Home: { screen: HomeScreen },
@@ -152,26 +152,26 @@ class HomeScreen extends React.Component {
         };
     }
 
-    setSpeed1 = () => {
-        this.setState({ speedCount: 10000});
-        //this.setState((prevState) => ({ 'speedCount': prevState.speedCount +1}))
-    }
-    setSpeed2 = () => {
-        this.setState({ speedCount: 250});
-        //this.setState((prevState) => ({ 'speedCount': prevState.speedCount +1}))
-    }
-    setSpeed3 = () => {
-        this.setState({ speedCount: 500});
-        //this.setState((prevState) => ({ 'speedCount': prevState.speedCount +1}))
-    }
-    setSpeed4 = () => {
-        this.setState({ speedCount: 250});
-        //this.setState((prevState) => ({ 'speedCount': prevState.speedCount +1}))
-    }
-    setSpeed5 = () => {
-        this.setState({ speedCount: 50});
-        //this.setState((prevState) => ({ 'speedCount': prevState.speedCount +1}))
-    }
+    // setSpeed1 = () => {
+    //     this.setState({ speedCount: 10000});
+    //     //this.setState((prevState) => ({ 'speedCount': prevState.speedCount +1}))
+    // }
+    // setSpeed2 = () => {
+    //     this.setState({ speedCount: 250});
+    //     //this.setState((prevState) => ({ 'speedCount': prevState.speedCount +1}))
+    // }
+    // setSpeed3 = () => {
+    //     this.setState({ speedCount: 500});
+    //     //this.setState((prevState) => ({ 'speedCount': prevState.speedCount +1}))
+    // }
+    // setSpeed4 = () => {
+    //     this.setState({ speedCount: 250});
+    //     //this.setState((prevState) => ({ 'speedCount': prevState.speedCount +1}))
+    // }
+    // setSpeed5 = () => {
+    //     this.setState({ speedCount: 50});
+    //     //this.setState((prevState) => ({ 'speedCount': prevState.speedCount +1}))
+    // }
 
     render() {
         return(
@@ -179,97 +179,1277 @@ class HomeScreen extends React.Component {
                 <Text>HomeScreen</Text>
                 <Button
                     onPress={() => {
-                        this.props.navigation.navigate('firstScreen',
-                            {
-                                speedCount: this.state.speedCount
-                            });
+                        this.props.navigation.navigate('firstScreen');
                     }
                     }
-                    title="Go to Screen 1"
+                    title="Welcome! This is HomeScreen"
                 />
 
                 <Text>Speed: {this.state.speedCount}</Text>
 
-                <Button1 onPress = {this.setSpeed1}/>
-                <Button2 onPress = {this.setSpeed2}/>
+                <Button1 onPress ={() => {
+                    this.props.navigation.navigate('firstScreen',
+                        {
+                            speedCount: 10000
+                        });
+                }
+                }/>
+                <Button2 onPress ={() => {
+                    this.props.navigation.navigate('firstScreen',
+                        {
+                            speedCount: 250
+                        });
+                }
+                }/>
+                <Button3 onPress ={() => {
+                    this.props.navigation.navigate('firstScreen',
+                        {
+                            speedCount: 1000
+                        });
+                }
+                }/>
             </View>
         );
     }
 }
 
 class screen1 extends React.Component {
-    setSpeed1 = () => {
-        this.setState({ speedCount: 10000});
-        //this.setState((prevState) => ({ 'speedCount': prevState.speedCount +1}))
-    }
-    setSpeed2 = () => {
-        this.setState({ speedCount: 250});
-        //this.setState((prevState) => ({ 'speedCount': prevState.speedCount +1}))
-    }
     render() {
         const { navigation } = this.props
         const speedCount = navigation.getParam('speedCount');
 
         return (
-            <View style={styles.container}>
-                <FadeInView
-                    duration={speedCount}
-                    style={{width:400, height:600, backgroundColor:'powderblue'}}
-                >
-                    <Text>Screen 1</Text>
-                    <Button
-                        onPress={() => {
+            <FadeInView
+                duration={speedCount}
+                //change width and style if needed
+                style={{width:358, height:630}}
+            >
+
+                <View style={styles.container}>
+                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <View style={{
+                        padding:10,
+                        borderRadius: 6,
+                        height:60,
+                        width: "60%",
+                        justifyContent: 'space-between',
+                        marginBottom:50,
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        shadowRadius:20,
+                        backgroundColor:'Blue',
+                        flexDirection:'row'
+                    }}>
+                        <Button1 onPress={() => {
                             this.props.navigation.navigate('secondScreen',
                                 {
-                                    speedCount: this.props.speedCount
+                                    speedCount: 0
                                 });
                         }
                         }
-                        title="Go to Screen 2"
-                    />
-                    <Text>Speed: {speedCount}</Text>
+                                 title="speed 1"
+                        />
+                        <Button2 onPress={() => {
+                            this.props.navigation.navigate('secondScreen',
+                                {
+                                    speedCount: 500
+                                });
+                        }
+                        }
+                                 title="500"
+                        />
+                        <Button3 onPress={() => {
+                            this.props.navigation.navigate('secondScreen',
+                                {
+                                    speedCount: 750
+                                });
+                        }
+                        }
+                                 title="750"
+                        />
+                        <Button4 onPress={() => {
+                            this.props.navigation.navigate('secondScreen',
+                                {
+                                    speedCount: 1300
+                                });
+                        }
+                        }
+                                 title="1300"
+                        />
+                        <Button5 onPress={() => {
+                            this.props.navigation.navigate('secondScreen',
+                                {
+                                    speedCount: 1600
+                                });
+                        }
+                        }
+                                 title="1600"
+                        />
+                    </View>
 
-                    <Button1 onPress = {this.setSpeed1}/>
-                    <Button2 onPress = {this.setSpeed2}/>
-                </FadeInView>
-            </View>
+                </View>
+            </FadeInView>
         );
     }
 }
 
 class screen2 extends React.Component {
-
     render() {
         const { navigation } = this.props
         const speedCount = navigation.getParam('speedCount');
+
         return (
-            <View style={styles.container}>
-                <FadeInView
-                    duration={speedCount}
-                    style={{width:400, height:600, backgroundColor:'powderblue'}}
-                >
-                    <Text>Screen 2</Text>
-                    <Button
-                        onPress={() => this.props.navigation.navigate('Home')}
-                        title="Go to HomeScreen"
-                    />
-                </FadeInView>
-            </View>
+            <FadeInView
+                duration={speedCount}
+                //change width and style if needed
+                style={{width:358, height:630}}
+            >
+
+                <View style={styles.container}>
+                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <View style={{
+                        padding:10,
+                        borderRadius: 6,
+                        height:60,
+                        width: "60%",
+                        justifyContent: 'space-between',
+                        marginBottom:50,
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        shadowRadius:20,
+                        backgroundColor:'Blue',
+                        flexDirection:'row'
+                    }}>
+                        <Button1 onPress={() => {
+                            this.props.navigation.navigate('thirteenScreen',
+                                {
+                                    speedCount: 0
+                                });
+                        }
+                        }
+                        />
+                        <Button2 onPress={() => {
+                            this.props.navigation.navigate('thirteenScreen',
+                                {
+                                    speedCount: 500
+                                });
+                        }
+                        }
+                        />
+                        <Button3 onPress={() => {
+                            this.props.navigation.navigate('thirteenScreen',
+                                {
+                                    speedCount: 750
+                                });
+                        }
+                        }
+                        />
+                        <Button4 onPress={() => {
+                            this.props.navigation.navigate('thirteenScreen',
+                                {
+                                    speedCount: 1300
+                                });
+                        }
+                        }
+                        />
+                        <Button5 onPress={() => {
+                            this.props.navigation.navigate('thirteenScreen',
+                                {
+                                    speedCount: 1600
+                                });
+                        }
+                        }
+                        />
+                    </View>
+
+                </View>
+            </FadeInView>
         );
     }
 }
 
 
+class screen13 extends React.Component {
+    render() {
+        const { navigation } = this.props
+        const speedCount = navigation.getParam('speedCount');
 
+        return (
+            <FadeInView
+                duration={speedCount}
+                //change width and style if needed
+                style={{width:358, height:630}}
+            >
 
+                <View style={styles.container}>
+                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <View style={{
+                        padding:10,
+                        borderRadius: 6,
+                        height:60,
+                        width: "60%",
+                        justifyContent: 'space-between',
+                        marginBottom:50,
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        shadowRadius:20,
+                        backgroundColor:'Blue',
+                        flexDirection:'row'
+                    }}>
+                        <Button1 onPress={() => {
+                            this.props.navigation.navigate('fourteenScreen',
+                                {
+                                    speedCount: 0
+                                });
+                        }
+                        }
+                        />
+                        <Button2 onPress={() => {
+                            this.props.navigation.navigate('fourteenScreen',
+                                {
+                                    speedCount: 500
+                                });
+                        }
+                        }
+                        />
+                        <Button3 onPress={() => {
+                            this.props.navigation.navigate('fourteenScreen',
+                                {
+                                    speedCount: 750
+                                });
+                        }
+                        }
+                        />
+                        <Button4 onPress={() => {
+                            this.props.navigation.navigate('fourteenScreen',
+                                {
+                                    speedCount: 1300
+                                });
+                        }
+                        }
+                        />
+                        <Button5 onPress={() => {
+                            this.props.navigation.navigate('fourteenScreen',
+                                {
+                                    speedCount: 1600
+                                });
+                        }
+                        }
+                        />
+                    </View>
 
+                </View>
+            </FadeInView>
+        );
+    }
+}
+
+class screen14 extends React.Component {
+    render() {
+        const { navigation } = this.props
+        const speedCount = navigation.getParam('speedCount');
+
+        return (
+            <FadeInView
+                duration={speedCount}
+                //change width and style if needed
+                style={{width:358, height:630}}
+            >
+
+                <View style={styles.container}>
+                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <View style={{
+                        padding:10,
+                        borderRadius: 6,
+                        height:60,
+                        width: "60%",
+                        justifyContent: 'space-between',
+                        marginBottom:50,
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        shadowRadius:20,
+                        backgroundColor:'Blue',
+                        flexDirection:'row'
+                    }}>
+                        <Button1 onPress={() => {
+                            this.props.navigation.navigate('fifteenScreen',
+                                {
+                                    speedCount: 0
+                                });
+                        }
+                        }
+                        />
+                        <Button2 onPress={() => {
+                            this.props.navigation.navigate('fifteenScreen',
+                                {
+                                    speedCount: 500
+                                });
+                        }
+                        }
+                        />
+                        <Button3 onPress={() => {
+                            this.props.navigation.navigate('fifteenScreen',
+                                {
+                                    speedCount: 750
+                                });
+                        }
+                        }
+                        />
+                        <Button4 onPress={() => {
+                            this.props.navigation.navigate('fifteenScreen',
+                                {
+                                    speedCount: 1300
+                                });
+                        }
+                        }
+                        />
+                        <Button5 onPress={() => {
+                            this.props.navigation.navigate('fifteenScreen',
+                                {
+                                    speedCount: 1600
+                                });
+                        }
+                        }
+                        />
+                    </View>
+
+                </View>
+            </FadeInView>
+        );
+    }
+}
+
+class screen15 extends React.Component {
+    render() {
+        const { navigation } = this.props
+        const speedCount = navigation.getParam('speedCount');
+
+        return (
+            <FadeInView
+                duration={speedCount}
+                //change width and style if needed
+                style={{width:358, height:630}}
+            >
+
+                <View style={styles.container}>
+                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <View style={{
+                        padding:10,
+                        borderRadius: 6,
+                        height:60,
+                        width: "60%",
+                        justifyContent: 'space-between',
+                        marginBottom:50,
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        shadowRadius:20,
+                        backgroundColor:'Blue',
+                        flexDirection:'row'
+                    }}>
+                        <Button1 onPress={() => {
+                            this.props.navigation.navigate('sixteenScreen',
+                                {
+                                    speedCount: 0
+                                });
+                        }
+                        }
+                        />
+                        <Button2 onPress={() => {
+                            this.props.navigation.navigate('sixteenScreen',
+                                {
+                                    speedCount: 500
+                                });
+                        }
+                        }
+                        />
+                        <Button3 onPress={() => {
+                            this.props.navigation.navigate('sixteenScreen',
+                                {
+                                    speedCount: 750
+                                });
+                        }
+                        }
+                        />
+                        <Button4 onPress={() => {
+                            this.props.navigation.navigate('sixteenScreen',
+                                {
+                                    speedCount: 1300
+                                });
+                        }
+                        }
+                        />
+                        <Button5 onPress={() => {
+                            this.props.navigation.navigate('sixteenScreen',
+                                {
+                                    speedCount: 1600
+                                });
+                        }
+                        }
+                        />
+                    </View>
+
+                </View>
+            </FadeInView>
+        );
+    }
+}
+
+class screen16 extends React.Component {
+    render() {
+        const { navigation } = this.props
+        const speedCount = navigation.getParam('speedCount');
+
+        return (
+            <FadeInView
+                duration={speedCount}
+                //change width and style if needed
+                style={{width:358, height:630}}
+            >
+
+                <View style={styles.container}>
+                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <View style={{
+                        padding:10,
+                        borderRadius: 6,
+                        height:60,
+                        width: "60%",
+                        justifyContent: 'space-between',
+                        marginBottom:50,
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        shadowRadius:20,
+                        backgroundColor:'Blue',
+                        flexDirection:'row'
+                    }}>
+                        <Button1 onPress={() => {
+                            this.props.navigation.navigate('seventeenScreen',
+                                {
+                                    speedCount: 0
+                                });
+                        }
+                        }
+                        />
+                        <Button2 onPress={() => {
+                            this.props.navigation.navigate('seventeenScreen',
+                                {
+                                    speedCount: 500
+                                });
+                        }
+                        }
+                        />
+                        <Button3 onPress={() => {
+                            this.props.navigation.navigate('seventeenScreen',
+                                {
+                                    speedCount: 750
+                                });
+                        }
+                        }
+                        />
+                        <Button4 onPress={() => {
+                            this.props.navigation.navigate('seventeenScreen',
+                                {
+                                    speedCount: 1300
+                                });
+                        }
+                        }
+                        />
+                        <Button5 onPress={() => {
+                            this.props.navigation.navigate('seventeenScreen',
+                                {
+                                    speedCount: 1600
+                                });
+                        }
+                        }
+                        />
+                    </View>
+
+                </View>
+            </FadeInView>
+        );
+    }
+}
+
+class screen17 extends React.Component {
+    render() {
+        const { navigation } = this.props
+        const speedCount = navigation.getParam('speedCount');
+
+        return (
+            <FadeInView
+                duration={speedCount}
+                //change width and style if needed
+                style={{width:358, height:630}}
+            >
+
+                <View style={styles.container}>
+                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <View style={{
+                        padding:10,
+                        borderRadius: 6,
+                        height:60,
+                        width: "60%",
+                        justifyContent: 'space-between',
+                        marginBottom:50,
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        shadowRadius:20,
+                        backgroundColor:'Blue',
+                        flexDirection:'row'
+                    }}>
+                        <Button1 onPress={() => {
+                            this.props.navigation.navigate('eighteenScreen',
+                                {
+                                    speedCount: 0
+                                });
+                        }
+                        }
+                        />
+                        <Button2 onPress={() => {
+                            this.props.navigation.navigate('eighteenScreen',
+                                {
+                                    speedCount: 500
+                                });
+                        }
+                        }
+                        />
+                        <Button3 onPress={() => {
+                            this.props.navigation.navigate('eighteenScreen',
+                                {
+                                    speedCount: 750
+                                });
+                        }
+                        }
+                        />
+                        <Button4 onPress={() => {
+                            this.props.navigation.navigate('eighteenScreen',
+                                {
+                                    speedCount: 1300
+                                });
+                        }
+                        }
+                        />
+                        <Button5 onPress={() => {
+                            this.props.navigation.navigate('eighteenScreen',
+                                {
+                                    speedCount: 1600
+                                });
+                        }
+                        }
+                        />
+                    </View>
+
+                </View>
+            </FadeInView>
+        );
+    }
+}
+
+class screen18 extends React.Component {
+    render() {
+        const { navigation } = this.props
+        const speedCount = navigation.getParam('speedCount');
+
+        return (
+            <FadeInView
+                duration={speedCount}
+                //change width and style if needed
+                style={{width:358, height:630}}
+            >
+
+                <View style={styles.container}>
+                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <View style={{
+                        padding:10,
+                        borderRadius: 6,
+                        height:60,
+                        width: "60%",
+                        justifyContent: 'space-between',
+                        marginBottom:50,
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        shadowRadius:20,
+                        backgroundColor:'Blue',
+                        flexDirection:'row'
+                    }}>
+                        <Button1 onPress={() => {
+                            this.props.navigation.navigate('nineteenScreen',
+                                {
+                                    speedCount: 0
+                                });
+                        }
+                        }
+                        />
+                        <Button2 onPress={() => {
+                            this.props.navigation.navigate('nineteenScreen',
+                                {
+                                    speedCount: 500
+                                });
+                        }
+                        }
+                        />
+                        <Button3 onPress={() => {
+                            this.props.navigation.navigate('nineteenScreen',
+                                {
+                                    speedCount: 750
+                                });
+                        }
+                        }
+                        />
+                        <Button4 onPress={() => {
+                            this.props.navigation.navigate('nineteenScreen',
+                                {
+                                    speedCount: 1300
+                                });
+                        }
+                        }
+                        />
+                        <Button5 onPress={() => {
+                            this.props.navigation.navigate('nineteenScreen',
+                                {
+                                    speedCount: 1600
+                                });
+                        }
+                        }
+                        />
+                    </View>
+
+                </View>
+            </FadeInView>
+        );
+    }
+}
+
+class screen19 extends React.Component {
+    render() {
+        const { navigation } = this.props
+        const speedCount = navigation.getParam('speedCount');
+
+        return (
+            <FadeInView
+                duration={speedCount}
+                //change width and style if needed
+                style={{width:358, height:630}}
+            >
+
+                <View style={styles.container}>
+                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <View style={{
+                        padding:10,
+                        borderRadius: 6,
+                        height:60,
+                        width: "60%",
+                        justifyContent: 'space-between',
+                        marginBottom:50,
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        shadowRadius:20,
+                        backgroundColor:'Blue',
+                        flexDirection:'row'
+                    }}>
+                        <Button1 onPress={() => {
+                            this.props.navigation.navigate('twentyScreen',
+                                {
+                                    speedCount: 0
+                                });
+                        }
+                        }
+                        />
+                        <Button2 onPress={() => {
+                            this.props.navigation.navigate('twentyScreen',
+                                {
+                                    speedCount: 500
+                                });
+                        }
+                        }
+                        />
+                        <Button3 onPress={() => {
+                            this.props.navigation.navigate('twentyScreen',
+                                {
+                                    speedCount: 750
+                                });
+                        }
+                        }
+                        />
+                        <Button4 onPress={() => {
+                            this.props.navigation.navigate('twentyScreen',
+                                {
+                                    speedCount: 1300
+                                });
+                        }
+                        }
+                        />
+                        <Button5 onPress={() => {
+                            this.props.navigation.navigate('twentyScreen',
+                                {
+                                    speedCount: 1600
+                                });
+                        }
+                        }
+                        />
+                    </View>
+
+                </View>
+            </FadeInView>
+        );
+    }
+}
+
+class screen20 extends React.Component {
+    render() {
+        const { navigation } = this.props
+        const speedCount = navigation.getParam('speedCount');
+
+        return (
+            <FadeInView
+                duration={speedCount}
+                //change width and style if needed
+                style={{width:358, height:630}}
+            >
+
+                <View style={styles.container}>
+                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <View style={{
+                        padding:10,
+                        borderRadius: 6,
+                        height:60,
+                        width: "60%",
+                        justifyContent: 'space-between',
+                        marginBottom:50,
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        shadowRadius:20,
+                        backgroundColor:'Blue',
+                        flexDirection:'row'
+                    }}>
+                        <Button1 onPress={() => {
+                            this.props.navigation.navigate('twentyoneScreen',
+                                {
+                                    speedCount: 0
+                                });
+                        }
+                        }
+                        />
+                        <Button2 onPress={() => {
+                            this.props.navigation.navigate('twentyoneScreen',
+                                {
+                                    speedCount: 500
+                                });
+                        }
+                        }
+                        />
+                        <Button3 onPress={() => {
+                            this.props.navigation.navigate('twentyoneScreen',
+                                {
+                                    speedCount: 750
+                                });
+                        }
+                        }
+                        />
+                        <Button4 onPress={() => {
+                            this.props.navigation.navigate('twentyoneScreen',
+                                {
+                                    speedCount: 1300
+                                });
+                        }
+                        }
+                        />
+                        <Button5 onPress={() => {
+                            this.props.navigation.navigate('twentyoneScreen',
+                                {
+                                    speedCount: 1600
+                                });
+                        }
+                        }
+                        />
+                    </View>
+
+                </View>
+            </FadeInView>
+        );
+    }
+}
+
+class screen21 extends React.Component {
+    render() {
+        const { navigation } = this.props
+        const speedCount = navigation.getParam('speedCount');
+
+        return (
+            <FadeInView
+                duration={speedCount}
+                //change width and style if needed
+                style={{width:358, height:630}}
+            >
+
+                <View style={styles.container}>
+                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <View style={{
+                        padding:10,
+                        borderRadius: 6,
+                        height:60,
+                        width: "60%",
+                        justifyContent: 'space-between',
+                        marginBottom:50,
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        shadowRadius:20,
+                        backgroundColor:'Blue',
+                        flexDirection:'row'
+                    }}>
+                        <Button1 onPress={() => {
+                            this.props.navigation.navigate('twentytwoScreen',
+                                {
+                                    speedCount: 0
+                                });
+                        }
+                        }
+                        />
+                        <Button2 onPress={() => {
+                            this.props.navigation.navigate('twentytwoScreen',
+                                {
+                                    speedCount: 500
+                                });
+                        }
+                        }
+                        />
+                        <Button3 onPress={() => {
+                            this.props.navigation.navigate('twentytwoScreen',
+                                {
+                                    speedCount: 750
+                                });
+                        }
+                        }
+                        />
+                        <Button4 onPress={() => {
+                            this.props.navigation.navigate('twentytwoScreen',
+                                {
+                                    speedCount: 1300
+                                });
+                        }
+                        }
+                        />
+                        <Button5 onPress={() => {
+                            this.props.navigation.navigate('twentytwoScreen',
+                                {
+                                    speedCount: 1600
+                                });
+                        }
+                        }
+                        />
+                    </View>
+
+                </View>
+            </FadeInView>
+        );
+    }
+}
+
+class screen22 extends React.Component {
+    render() {
+        const { navigation } = this.props
+        const speedCount = navigation.getParam('speedCount');
+
+        return (
+            <FadeInView
+                duration={speedCount}
+                //change width and style if needed
+                style={{width:358, height:630}}
+            >
+
+                <View style={styles.container}>
+                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <View style={{
+                        padding:10,
+                        borderRadius: 6,
+                        height:60,
+                        width: "60%",
+                        justifyContent: 'space-between',
+                        marginBottom:50,
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        shadowRadius:20,
+                        backgroundColor:'Blue',
+                        flexDirection:'row'
+                    }}>
+                        <Button1 onPress={() => {
+                            this.props.navigation.navigate('twentythreeScreen',
+                                {
+                                    speedCount: 0
+                                });
+                        }
+                        }
+                        />
+                        <Button2 onPress={() => {
+                            this.props.navigation.navigate('twentythreeScreen',
+                                {
+                                    speedCount: 500
+                                });
+                        }
+                        }
+                        />
+                        <Button3 onPress={() => {
+                            this.props.navigation.navigate('twentythreeScreen',
+                                {
+                                    speedCount: 750
+                                });
+                        }
+                        }
+                        />
+                        <Button4 onPress={() => {
+                            this.props.navigation.navigate('twentythreeScreen',
+                                {
+                                    speedCount: 1300
+                                });
+                        }
+                        }
+                        />
+                        <Button5 onPress={() => {
+                            this.props.navigation.navigate('twentythreeScreen',
+                                {
+                                    speedCount: 1600
+                                });
+                        }
+                        }
+                        />
+                    </View>
+
+                </View>
+            </FadeInView>
+        );
+    }
+}
+
+class screen23 extends React.Component {
+    render() {
+        const { navigation } = this.props
+        const speedCount = navigation.getParam('speedCount');
+
+        return (
+            <FadeInView
+                duration={speedCount}
+                //change width and style if needed
+                style={{width:358, height:630}}
+            >
+
+                <View style={styles.container}>
+                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <View style={{
+                        padding:10,
+                        borderRadius: 6,
+                        height:60,
+                        width: "60%",
+                        justifyContent: 'space-between',
+                        marginBottom:50,
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        shadowRadius:20,
+                        backgroundColor:'Blue',
+                        flexDirection:'row'
+                    }}>
+                        <Button1 onPress={() => {
+                            this.props.navigation.navigate('twentyfourScreen',
+                                {
+                                    speedCount: 0
+                                });
+                        }
+                        }
+                        />
+                        <Button2 onPress={() => {
+                            this.props.navigation.navigate('twentyfourScreen',
+                                {
+                                    speedCount: 500
+                                });
+                        }
+                        }
+                        />
+                        <Button3 onPress={() => {
+                            this.props.navigation.navigate('twentyfourScreen',
+                                {
+                                    speedCount: 750
+                                });
+                        }
+                        }
+                        />
+                        <Button4 onPress={() => {
+                            this.props.navigation.navigate('twentyfourScreen',
+                                {
+                                    speedCount: 1300
+                                });
+                        }
+                        }
+                        />
+                        <Button5 onPress={() => {
+                            this.props.navigation.navigate('twentyfourScreen',
+                                {
+                                    speedCount: 1600
+                                });
+                        }
+                        }
+                        />
+                    </View>
+
+                </View>
+            </FadeInView>
+        );
+    }
+}
+
+class screen24 extends React.Component {
+    render() {
+        const { navigation } = this.props
+        const speedCount = navigation.getParam('speedCount');
+
+        return (
+            <FadeInView
+                duration={speedCount}
+                //change width and style if needed
+                style={{width:358, height:630}}
+            >
+
+                <View style={styles.container}>
+                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <View style={{
+                        padding:10,
+                        borderRadius: 6,
+                        height:60,
+                        width: "60%",
+                        justifyContent: 'space-between',
+                        marginBottom:50,
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        shadowRadius:20,
+                        backgroundColor:'Blue',
+                        flexDirection:'row'
+                    }}>
+                        <Button1 onPress={() => {
+                            this.props.navigation.navigate('twentyfiveScreen',
+                                {
+                                    speedCount: 0
+                                });
+                        }
+                        }
+                        />
+                        <Button2 onPress={() => {
+                            this.props.navigation.navigate('twentyfiveScreen',
+                                {
+                                    speedCount: 500
+                                });
+                        }
+                        }
+                        />
+                        <Button3 onPress={() => {
+                            this.props.navigation.navigate('twentyfiveScreen',
+                                {
+                                    speedCount: 750
+                                });
+                        }
+                        }
+                        />
+                        <Button4 onPress={() => {
+                            this.props.navigation.navigate('twentyfiveScreen',
+                                {
+                                    speedCount: 1300
+                                });
+                        }
+                        }
+                        />
+                        <Button5 onPress={() => {
+                            this.props.navigation.navigate('twentyfiveScreen',
+                                {
+                                    speedCount: 1600
+                                });
+                        }
+                        }
+                        />
+                    </View>
+
+                </View>
+            </FadeInView>
+        );
+    }
+}
+
+class screen25 extends React.Component {
+    render() {
+        const { navigation } = this.props
+        const speedCount = navigation.getParam('speedCount');
+
+        return (
+            <FadeInView
+                duration={speedCount}
+                //change width and style if needed
+                style={{width:358, height:630}}
+            >
+
+                <View style={styles.container}>
+                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <View style={{
+                        padding:10,
+                        borderRadius: 6,
+                        height:60,
+                        width: "60%",
+                        justifyContent: 'space-between',
+                        marginBottom:50,
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        shadowRadius:20,
+                        backgroundColor:'Blue',
+                        flexDirection:'row'
+                    }}>
+                        <Button1 onPress={() => {
+                            this.props.navigation.navigate('twentysixScreen',
+                                {
+                                    speedCount: 0
+                                });
+                        }
+                        }
+                        />
+                        <Button2 onPress={() => {
+                            this.props.navigation.navigate('twentysixScreen',
+                                {
+                                    speedCount: 500
+                                });
+                        }
+                        }
+                        />
+                        <Button3 onPress={() => {
+                            this.props.navigation.navigate('twentysixScreen',
+                                {
+                                    speedCount: 750
+                                });
+                        }
+                        }
+                        />
+                        <Button4 onPress={() => {
+                            this.props.navigation.navigate('twentysixScreen',
+                                {
+                                    speedCount: 1300
+                                });
+                        }
+                        }
+                        />
+                        <Button5 onPress={() => {
+                            this.props.navigation.navigate('twentysixScreen',
+                                {
+                                    speedCount: 1600
+                                });
+                        }
+                        }
+                        />
+                    </View>
+
+                </View>
+            </FadeInView>
+        );
+    }
+}
+
+class screen26 extends React.Component {
+    render() {
+        const { navigation } = this.props
+        const speedCount = navigation.getParam('speedCount');
+
+        return (
+            <FadeInView
+                duration={speedCount}
+                //change width and style if needed
+                style={{width:358, height:630}}
+            >
+
+                <View style={styles.container}>
+                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <View style={{
+                        padding:10,
+                        borderRadius: 6,
+                        height:60,
+                        width: "60%",
+                        justifyContent: 'space-between',
+                        marginBottom:50,
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        shadowRadius:20,
+                        backgroundColor:'Blue',
+                        flexDirection:'row'
+                    }}>
+                        <Button1 onPress={() => {
+                            this.props.navigation.navigate('endScreen',
+                                {
+                                    speedCount: 0
+                                });
+                        }
+                        }
+                        />
+                        <Button2 onPress={() => {
+                            this.props.navigation.navigate('endScreen',
+                                {
+                                    speedCount: 500
+                                });
+                        }
+                        }
+                        />
+                        <Button3 onPress={() => {
+                            this.props.navigation.navigate('endScreen',
+                                {
+                                    speedCount: 750
+                                });
+                        }
+                        }
+                        />
+                        <Button4 onPress={() => {
+                            this.props.navigation.navigate('endScreen',
+                                {
+                                    speedCount: 1300
+                                });
+                        }
+                        }
+                        />
+                        <Button5 onPress={() => {
+                            this.props.navigation.navigate('endScreen',
+                                {
+                                    speedCount: 1600
+                                });
+                        }
+                        }
+                        />
+                    </View>
+
+                </View>
+            </FadeInView>
+        );
+    }
+}
+
+class LastScreen extends React.Component {
+    render() {
+        return(
+            <View style={styles.container}>
+                <Text>Done!</Text>
+            </View>
+        );
+    }
+}
 
 const AppNavigator = createStackNavigator(
     {
         //Main: App,
         Home: HomeScreen,
         firstScreen: screen1,
-        secondScreen: screen2
+        secondScreen: screen2,
+        thirteenScreen: screen13,
+        fourteenScreen: screen14,
+        fifteenScreen: screen15,
+        sixteenScreen: screen16,
+        seventeenScreen: screen17,
+        eighteenScreen: screen18,
+        nineteenScreen: screen19,
+        twentyScreen: screen20,
+        twentyoneScreen: screen21,
+        twentytwoScreen: screen22,
+        twentythreeScreen: screen23,
+        twentyfourScreen: screen24,
+        twentyfiveScreen: screen25,
+        twentysixScreen: screen26,
+        endScreen: LastScreen
     },
     {
         initialRouteName: "Home"
@@ -322,20 +1502,32 @@ Animated.timing(position, {
 
 const styles = StyleSheet.create({
     container: {
+        backgroundColor: 'rgb(32,53,70)',
         flex: 1,
-        backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
     },
-    bigblue: {
-        color: 'blue',
-        fontWeight: 'bold',
-        fontSize: 30,
+    title: {
+        fontWeight: "bold",
+        fontFamily: "monospace",
+        fontSize: 40,
+        color: "white",
+        marginBottom: 350,
+        marginTop: 40,
+        textAlign:"center",
     },
-    red: {
-        color: 'red',
-    },
-});
+
+    text:{
+        fontWeight: "bold",
+        fontFamily: "monospace",
+        fontSize: 20,
+        color: "white",
+        marginBottom: 350,
+        marginTop: 40,
+        textAlign:"center",
+
+    }
+})
 
 // const transitionConfig = () => {
 //     return {
