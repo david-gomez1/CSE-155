@@ -10,7 +10,7 @@ import screen2 from './screens/screen2'
     Profile: { screen: ProfileScreen },
 }, {
     initialRoutName: 'Home',
-});
+});k
 
 AppRegistry.registerComponent('SimpleApp', () => SimpleApp)
 */
