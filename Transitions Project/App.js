@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
 import { Alert, Animated, AppRegistry, Button, StyleSheet, Text, View } from 'react-native';
-import { StackNavigator, createStackNavigator, createAppContainer} from 'react-navigation';
+import { createStackNavigator, createAppContainer} from 'react-navigation';
+import FadeInView from 'react-native-fade-in-view';
 
-import HomeScreen from './screens/HomeScreen'
-import screen1 from './screens/screen1'
-import screen2 from './screens/screen2'
+// import HomeScreen from './screens/HomeScreen'
+// import screen1 from './screens/screen1'
+// import screen2 from './screens/screen2'
+import Button1 from './screens/Button1'
+import Button2 from './screens/Button2'
+// import Button3 from './Button3'
+// import Button4 from './Button4'
+// import Button5 from './Button5'
+
 /*const SimpleApp = StackNavigator({
     Home: { screen: HomeScreen },
     Profile: { screen: ProfileScreen },
@@ -74,19 +81,203 @@ AppRegistry.registerComponent('SimpleApp', () => SimpleApp)
 //--------------------------------------------------------------
 
 //-----------------working code-------------------------------
+// class FadeInView extends React.Component {
+//
+//     state = {
+//         fadeAnim: new Animated.Value(0),  // Initial value for opacity: 0
+//     }
+//
+//     componentDidMount() {
+//         Animated.timing(                  // Animate over time
+//             this.state.fadeAnim,            // The animated value to drive
+//             {
+//                 toValue: 1,                   // Animate to opacity: 1 (opaque)
+//                 duration: this.state.speedCount,              // Make it take a while
+//             }
+//         ).start();                        // Starts the animation
+//     }
+//
+//     render() {
+//         let { fadeAnim } = this.state;
+//
+//         return (
+//             <Animated.View                 // Special animatable View
+//                 style={{
+//                     ...this.props.style,
+//                     opacity: fadeAnim,         // Bind opacity to animated value
+//                 }}
+//             >
+//                 {this.props.children}
+//             </Animated.View>
+//         );
+//     }
+// }
+
+// class FadeInView extends React.Component {
+//     state = {
+//         fadeAnim: new Animated.Value(0),  // Initial value for opacity: 0
+//     }
+//
+//     componentDidMount() {
+//         Animated.timing(                  // Animate over time
+//             this.state.fadeAnim,            // The animated value to drive
+//             {
+//                 toValue: 1,                   // Animate to opacity: 1 (opaque)
+//                 duration: this.state.speedCount,              // Make it take a while
+//             }
+//         ).start();                        // Starts the animation
+//     }
+//
+//     render() {
+//         let { fadeAnim } = this.state;
+//
+//         return (
+//             <Animated.View                 // Special animatable View
+//                 style={{
+//                     ...this.props.style,
+//                     opacity: fadeAnim,         // Bind opacity to animated value
+//                 }}
+//             >
+//                 {this.props.children}
+//             </Animated.View>
+//         );
+//     }
+// }
+
+class HomeScreen extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+            speedCount: 50
+        };
+    }
+
+    setSpeed1 = () => {
+        this.setState({ speedCount: 10000});
+        //this.setState((prevState) => ({ 'speedCount': prevState.speedCount +1}))
+    }
+    setSpeed2 = () => {
+        this.setState({ speedCount: 250});
+        //this.setState((prevState) => ({ 'speedCount': prevState.speedCount +1}))
+    }
+    setSpeed3 = () => {
+        this.setState({ speedCount: 500});
+        //this.setState((prevState) => ({ 'speedCount': prevState.speedCount +1}))
+    }
+    setSpeed4 = () => {
+        this.setState({ speedCount: 250});
+        //this.setState((prevState) => ({ 'speedCount': prevState.speedCount +1}))
+    }
+    setSpeed5 = () => {
+        this.setState({ speedCount: 50});
+        //this.setState((prevState) => ({ 'speedCount': prevState.speedCount +1}))
+    }
+
+    render() {
+        return(
+            <View style={styles.container}>
+                <Text>HomeScreen</Text>
+                <Button
+                    onPress={() => {
+                        this.props.navigation.navigate('firstScreen',
+                            {
+                                speedCount: this.state.speedCount
+                            });
+                    }
+                    }
+                    title="Go to Screen 1"
+                />
+
+                <Text>Speed: {this.state.speedCount}</Text>
+
+                <Button1 onPress = {this.setSpeed1}/>
+                <Button2 onPress = {this.setSpeed2}/>
+            </View>
+        );
+    }
+}
+
+class screen1 extends React.Component {
+    setSpeed1 = () => {
+        this.setState({ speedCount: 10000});
+        //this.setState((prevState) => ({ 'speedCount': prevState.speedCount +1}))
+    }
+    setSpeed2 = () => {
+        this.setState({ speedCount: 250});
+        //this.setState((prevState) => ({ 'speedCount': prevState.speedCount +1}))
+    }
+    render() {
+        const { navigation } = this.props
+        const speedCount = navigation.getParam('speedCount');
+
+        return (
+            <View style={styles.container}>
+                <FadeInView
+                    duration={speedCount}
+                    style={{width:400, height:600, backgroundColor:'powderblue'}}
+                >
+                    <Text>Screen 1</Text>
+                    <Button
+                        onPress={() => {
+                            this.props.navigation.navigate('secondScreen',
+                                {
+                                    speedCount: this.props.speedCount
+                                });
+                        }
+                        }
+                        title="Go to Screen 2"
+                    />
+                    <Text>Speed: {speedCount}</Text>
+
+                    <Button1 onPress = {this.setSpeed1}/>
+                    <Button2 onPress = {this.setSpeed2}/>
+                </FadeInView>
+            </View>
+        );
+    }
+}
+
+class screen2 extends React.Component {
+
+    render() {
+        const { navigation } = this.props
+        const speedCount = navigation.getParam('speedCount');
+        return (
+            <View style={styles.container}>
+                <FadeInView
+                    duration={speedCount}
+                    style={{width:400, height:600, backgroundColor:'powderblue'}}
+                >
+                    <Text>Screen 2</Text>
+                    <Button
+                        onPress={() => this.props.navigation.navigate('Home')}
+                        title="Go to HomeScreen"
+                    />
+                </FadeInView>
+            </View>
+        );
+    }
+}
 
 
 
-const AppNavigator = createStackNavigator({
-    Home: HomeScreen,
-    firstScreen: screen1,
-    secondScreen: screen2
-}, {
-    //transitionConfig
-});
 
-const App = createAppContainer(AppNavigator);
-export default App
+
+
+const AppNavigator = createStackNavigator(
+    {
+        //Main: App,
+        Home: HomeScreen,
+        firstScreen: screen1,
+        secondScreen: screen2
+    },
+    {
+        initialRouteName: "Home"
+    }
+);
+
+export default createAppContainer(AppNavigator);
+
 //-----------------------------------------------------------
 
 //--------------------------davids video thing----------------
