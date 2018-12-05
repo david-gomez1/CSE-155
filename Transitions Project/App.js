@@ -1133,7 +1133,7 @@ class screen13 extends React.Component {
             >
 
                 <View style={styles.container}>
-                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <Text style={styles.text}>{"\n"}(7.)An example of a Soft Control is...</Text>
                     <View style={{
                         padding:10,
                         borderRadius: 6,
@@ -1150,7 +1150,7 @@ class screen13 extends React.Component {
                         <Button1 onPress={() => {
                             this.props.navigation.navigate('fourteenScreen',
                                 {
-                                    speedCount: 0
+                                    speedCount: 150
                                 });
                         }
                         }
@@ -1158,7 +1158,7 @@ class screen13 extends React.Component {
                         <Button2 onPress={() => {
                             this.props.navigation.navigate('fourteenScreen',
                                 {
-                                    speedCount: 500
+                                    speedCount: 250
                                 });
                         }
                         }
@@ -1166,7 +1166,7 @@ class screen13 extends React.Component {
                         <Button3 onPress={() => {
                             this.props.navigation.navigate('fourteenScreen',
                                 {
-                                    speedCount: 750
+                                    speedCount: 375
                                 });
                         }
                         }
@@ -1174,7 +1174,7 @@ class screen13 extends React.Component {
                         <Button4 onPress={() => {
                             this.props.navigation.navigate('fourteenScreen',
                                 {
-                                    speedCount: 1300
+                                    speedCount: 500
                                 });
                         }
                         }
@@ -1182,7 +1182,7 @@ class screen13 extends React.Component {
                         <Button5 onPress={() => {
                             this.props.navigation.navigate('fourteenScreen',
                                 {
-                                    speedCount: 1600
+                                    speedCount: 750
                                 });
                         }
                         }
@@ -1208,7 +1208,7 @@ class screen14 extends React.Component {
             >
 
                 <View style={styles.container}>
-                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <Text style={styles.text}>{"\n"}Scrollbar Slider</Text>
                     <View style={{
                         padding:10,
                         borderRadius: 6,
@@ -1225,7 +1225,7 @@ class screen14 extends React.Component {
                         <Button1 onPress={() => {
                             this.props.navigation.navigate('fifteenScreen',
                                 {
-                                    speedCount: 0
+                                    speedCount: 150
                                 });
                         }
                         }
@@ -1233,7 +1233,7 @@ class screen14 extends React.Component {
                         <Button2 onPress={() => {
                             this.props.navigation.navigate('fifteenScreen',
                                 {
-                                    speedCount: 500
+                                    speedCount: 250
                                 });
                         }
                         }
@@ -1241,7 +1241,7 @@ class screen14 extends React.Component {
                         <Button3 onPress={() => {
                             this.props.navigation.navigate('fifteenScreen',
                                 {
-                                    speedCount: 750
+                                    speedCount: 375
                                 });
                         }
                         }
@@ -1249,7 +1249,7 @@ class screen14 extends React.Component {
                         <Button4 onPress={() => {
                             this.props.navigation.navigate('fifteenScreen',
                                 {
-                                    speedCount: 1300
+                                    speedCount: 500
                                 });
                         }
                         }
@@ -1257,7 +1257,7 @@ class screen14 extends React.Component {
                         <Button5 onPress={() => {
                             this.props.navigation.navigate('fifteenScreen',
                                 {
-                                    speedCount: 1600
+                                    speedCount: 750
                                 });
                         }
                         }
@@ -1283,7 +1283,7 @@ class screen15 extends React.Component {
             >
 
                 <View style={styles.container}>
-                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <Text style={styles.text}>{"\n"}(8.)____ quantifies the amount of display movement for a given amount of control movement</Text>
                     <View style={{
                         padding:10,
                         borderRadius: 6,
@@ -1300,7 +1300,7 @@ class screen15 extends React.Component {
                         <Button1 onPress={() => {
                             this.props.navigation.navigate('sixteenScreen',
                                 {
-                                    speedCount: 0
+                                    speedCount: 150
                                 });
                         }
                         }
@@ -1308,7 +1308,7 @@ class screen15 extends React.Component {
                         <Button2 onPress={() => {
                             this.props.navigation.navigate('sixteenScreen',
                                 {
-                                    speedCount: 500
+                                    speedCount: 250
                                 });
                         }
                         }
@@ -1316,7 +1316,7 @@ class screen15 extends React.Component {
                         <Button3 onPress={() => {
                             this.props.navigation.navigate('sixteenScreen',
                                 {
-                                    speedCount: 750
+                                    speedCount: 375
                                 });
                         }
                         }
@@ -1324,7 +1324,7 @@ class screen15 extends React.Component {
                         <Button4 onPress={() => {
                             this.props.navigation.navigate('sixteenScreen',
                                 {
-                                    speedCount: 1300
+                                    speedCount: 500
                                 });
                         }
                         }
@@ -1332,7 +1332,7 @@ class screen15 extends React.Component {
                         <Button5 onPress={() => {
                             this.props.navigation.navigate('sixteenScreen',
                                 {
-                                    speedCount: 1600
+                                    speedCount: 750
                                 });
                         }
                         }
@@ -1358,7 +1358,7 @@ class screen16 extends React.Component {
             >
 
                 <View style={styles.container}>
-                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <Text style={styles.text}>{"\n"}CD Gain</Text>
                     <View style={{
                         padding:10,
                         borderRadius: 6,
@@ -1375,7 +1375,7 @@ class screen16 extends React.Component {
                         <Button1 onPress={() => {
                             this.props.navigation.navigate('seventeenScreen',
                                 {
-                                    speedCount: 0
+                                    speedCount: 150
                                 });
                         }
                         }
@@ -1383,7 +1383,7 @@ class screen16 extends React.Component {
                         <Button2 onPress={() => {
                             this.props.navigation.navigate('seventeenScreen',
                                 {
-                                    speedCount: 500
+                                    speedCount: 250
                                 });
                         }
                         }
@@ -1391,7 +1391,7 @@ class screen16 extends React.Component {
                         <Button3 onPress={() => {
                             this.props.navigation.navigate('seventeenScreen',
                                 {
-                                    speedCount: 750
+                                    speedCount: 375
                                 });
                         }
                         }
@@ -1399,7 +1399,7 @@ class screen16 extends React.Component {
                         <Button4 onPress={() => {
                             this.props.navigation.navigate('seventeenScreen',
                                 {
-                                    speedCount: 1300
+                                    speedCount: 500
                                 });
                         }
                         }
@@ -1407,7 +1407,7 @@ class screen16 extends React.Component {
                         <Button5 onPress={() => {
                             this.props.navigation.navigate('seventeenScreen',
                                 {
-                                    speedCount: 1600
+                                    speedCount: 750
                                 });
                         }
                         }
@@ -1433,7 +1433,7 @@ class screen17 extends React.Component {
             >
 
                 <View style={styles.container}>
-                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <Text style={styles.text}>{"\n"}(9.)Would an Isotonic Joystick sense the displacement of the stick?</Text>
                     <View style={{
                         padding:10,
                         borderRadius: 6,
@@ -1450,7 +1450,7 @@ class screen17 extends React.Component {
                         <Button1 onPress={() => {
                             this.props.navigation.navigate('eighteenScreen',
                                 {
-                                    speedCount: 0
+                                    speedCount: 150
                                 });
                         }
                         }
@@ -1458,7 +1458,7 @@ class screen17 extends React.Component {
                         <Button2 onPress={() => {
                             this.props.navigation.navigate('eighteenScreen',
                                 {
-                                    speedCount: 500
+                                    speedCount: 250
                                 });
                         }
                         }
@@ -1466,7 +1466,7 @@ class screen17 extends React.Component {
                         <Button3 onPress={() => {
                             this.props.navigation.navigate('eighteenScreen',
                                 {
-                                    speedCount: 750
+                                    speedCount: 375
                                 });
                         }
                         }
@@ -1474,7 +1474,7 @@ class screen17 extends React.Component {
                         <Button4 onPress={() => {
                             this.props.navigation.navigate('eighteenScreen',
                                 {
-                                    speedCount: 1300
+                                    speedCount: 500
                                 });
                         }
                         }
@@ -1482,7 +1482,7 @@ class screen17 extends React.Component {
                         <Button5 onPress={() => {
                             this.props.navigation.navigate('eighteenScreen',
                                 {
-                                    speedCount: 1600
+                                    speedCount: 750
                                 });
                         }
                         }
@@ -1508,7 +1508,7 @@ class screen18 extends React.Component {
             >
 
                 <View style={styles.container}>
-                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <Text style={styles.text}>{"\n"}Yes</Text>
                     <View style={{
                         padding:10,
                         borderRadius: 6,
@@ -1525,7 +1525,7 @@ class screen18 extends React.Component {
                         <Button1 onPress={() => {
                             this.props.navigation.navigate('nineteenScreen',
                                 {
-                                    speedCount: 0
+                                    speedCount: 150
                                 });
                         }
                         }
@@ -1533,7 +1533,7 @@ class screen18 extends React.Component {
                         <Button2 onPress={() => {
                             this.props.navigation.navigate('nineteenScreen',
                                 {
-                                    speedCount: 500
+                                    speedCount: 250
                                 });
                         }
                         }
@@ -1541,7 +1541,7 @@ class screen18 extends React.Component {
                         <Button3 onPress={() => {
                             this.props.navigation.navigate('nineteenScreen',
                                 {
-                                    speedCount: 750
+                                    speedCount: 375
                                 });
                         }
                         }
@@ -1549,7 +1549,7 @@ class screen18 extends React.Component {
                         <Button4 onPress={() => {
                             this.props.navigation.navigate('nineteenScreen',
                                 {
-                                    speedCount: 1300
+                                    speedCount: 500
                                 });
                         }
                         }
@@ -1557,7 +1557,7 @@ class screen18 extends React.Component {
                         <Button5 onPress={() => {
                             this.props.navigation.navigate('nineteenScreen',
                                 {
-                                    speedCount: 1600
+                                    speedCount: 750
                                 });
                         }
                         }
@@ -1583,7 +1583,7 @@ class screen19 extends React.Component {
             >
 
                 <View style={styles.container}>
-                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <Text style={styles.text}>{"\n"}(10.)Are Isometric devices most appropriate for rate control?</Text>
                     <View style={{
                         padding:10,
                         borderRadius: 6,
@@ -1600,7 +1600,7 @@ class screen19 extends React.Component {
                         <Button1 onPress={() => {
                             this.props.navigation.navigate('twentyScreen',
                                 {
-                                    speedCount: 0
+                                    speedCount: 150
                                 });
                         }
                         }
@@ -1608,7 +1608,7 @@ class screen19 extends React.Component {
                         <Button2 onPress={() => {
                             this.props.navigation.navigate('twentyScreen',
                                 {
-                                    speedCount: 500
+                                    speedCount: 250
                                 });
                         }
                         }
@@ -1616,7 +1616,7 @@ class screen19 extends React.Component {
                         <Button3 onPress={() => {
                             this.props.navigation.navigate('twentyScreen',
                                 {
-                                    speedCount: 750
+                                    speedCount: 375
                                 });
                         }
                         }
@@ -1624,7 +1624,7 @@ class screen19 extends React.Component {
                         <Button4 onPress={() => {
                             this.props.navigation.navigate('twentyScreen',
                                 {
-                                    speedCount: 1300
+                                    speedCount: 500
                                 });
                         }
                         }
@@ -1632,7 +1632,7 @@ class screen19 extends React.Component {
                         <Button5 onPress={() => {
                             this.props.navigation.navigate('twentyScreen',
                                 {
-                                    speedCount: 1600
+                                    speedCount: 750
                                 });
                         }
                         }
@@ -1658,7 +1658,7 @@ class screen20 extends React.Component {
             >
 
                 <View style={styles.container}>
-                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <Text style={styles.text}>{"\n"}No</Text>
                     <View style={{
                         padding:10,
                         borderRadius: 6,
@@ -1675,7 +1675,7 @@ class screen20 extends React.Component {
                         <Button1 onPress={() => {
                             this.props.navigation.navigate('twentyoneScreen',
                                 {
-                                    speedCount: 0
+                                    speedCount: 150
                                 });
                         }
                         }
@@ -1691,7 +1691,7 @@ class screen20 extends React.Component {
                         <Button3 onPress={() => {
                             this.props.navigation.navigate('twentyoneScreen',
                                 {
-                                    speedCount: 750
+                                    speedCount: 375
                                 });
                         }
                         }
@@ -1699,7 +1699,7 @@ class screen20 extends React.Component {
                         <Button4 onPress={() => {
                             this.props.navigation.navigate('twentyoneScreen',
                                 {
-                                    speedCount: 1300
+                                    speedCount: 500
                                 });
                         }
                         }
@@ -1707,7 +1707,7 @@ class screen20 extends React.Component {
                         <Button5 onPress={() => {
                             this.props.navigation.navigate('twentyoneScreen',
                                 {
-                                    speedCount: 1600
+                                    speedCount: 750
                                 });
                         }
                         }
@@ -1733,7 +1733,7 @@ class screen21 extends React.Component {
             >
 
                 <View style={styles.container}>
-                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <Text style={styles.text}>{"\n"}(11.) A mode is...</Text>
                     <View style={{
                         padding:10,
                         borderRadius: 6,
@@ -1750,7 +1750,7 @@ class screen21 extends React.Component {
                         <Button1 onPress={() => {
                             this.props.navigation.navigate('twentytwoScreen',
                                 {
-                                    speedCount: 0
+                                    speedCount: 150
                                 });
                         }
                         }
@@ -1758,7 +1758,7 @@ class screen21 extends React.Component {
                         <Button2 onPress={() => {
                             this.props.navigation.navigate('twentytwoScreen',
                                 {
-                                    speedCount: 500
+                                    speedCount: 250
                                 });
                         }
                         }
@@ -1766,7 +1766,7 @@ class screen21 extends React.Component {
                         <Button3 onPress={() => {
                             this.props.navigation.navigate('twentytwoScreen',
                                 {
-                                    speedCount: 750
+                                    speedCount: 375
                                 });
                         }
                         }
@@ -1774,7 +1774,7 @@ class screen21 extends React.Component {
                         <Button4 onPress={() => {
                             this.props.navigation.navigate('twentytwoScreen',
                                 {
-                                    speedCount: 1300
+                                    speedCount: 500
                                 });
                         }
                         }
@@ -1782,7 +1782,7 @@ class screen21 extends React.Component {
                         <Button5 onPress={() => {
                             this.props.navigation.navigate('twentytwoScreen',
                                 {
-                                    speedCount: 1600
+                                    speedCount: 750
                                 });
                         }
                         }
@@ -1808,7 +1808,7 @@ class screen22 extends React.Component {
             >
 
                 <View style={styles.container}>
-                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <Text style={styles.text}>{"\n"}A functioning arrangement or condidtion</Text>
                     <View style={{
                         padding:10,
                         borderRadius: 6,
@@ -1825,7 +1825,7 @@ class screen22 extends React.Component {
                         <Button1 onPress={() => {
                             this.props.navigation.navigate('twentythreeScreen',
                                 {
-                                    speedCount: 0
+                                    speedCount: 150
                                 });
                         }
                         }
@@ -1833,7 +1833,7 @@ class screen22 extends React.Component {
                         <Button2 onPress={() => {
                             this.props.navigation.navigate('twentythreeScreen',
                                 {
-                                    speedCount: 500
+                                    speedCount: 250
                                 });
                         }
                         }
@@ -1841,7 +1841,7 @@ class screen22 extends React.Component {
                         <Button3 onPress={() => {
                             this.props.navigation.navigate('twentythreeScreen',
                                 {
-                                    speedCount: 750
+                                    speedCount: 375
                                 });
                         }
                         }
@@ -1849,7 +1849,7 @@ class screen22 extends React.Component {
                         <Button4 onPress={() => {
                             this.props.navigation.navigate('twentythreeScreen',
                                 {
-                                    speedCount: 1300
+                                    speedCount: 500
                                 });
                         }
                         }
@@ -1857,7 +1857,7 @@ class screen22 extends React.Component {
                         <Button5 onPress={() => {
                             this.props.navigation.navigate('twentythreeScreen',
                                 {
-                                    speedCount: 1600
+                                    speedCount: 750
                                 });
                         }
                         }
@@ -1883,7 +1883,7 @@ class screen23 extends React.Component {
             >
 
                 <View style={styles.container}>
-                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <Text style={styles.text}>{"\n"}(12.)If Control DOF is less than Display DOF, ___ is needed in order to have access to the Display DOF...</Text>
                     <View style={{
                         padding:10,
                         borderRadius: 6,
@@ -1900,7 +1900,7 @@ class screen23 extends React.Component {
                         <Button1 onPress={() => {
                             this.props.navigation.navigate('twentyfourScreen',
                                 {
-                                    speedCount: 0
+                                    speedCount: 150
                                 });
                         }
                         }
@@ -1908,7 +1908,7 @@ class screen23 extends React.Component {
                         <Button2 onPress={() => {
                             this.props.navigation.navigate('twentyfourScreen',
                                 {
-                                    speedCount: 500
+                                    speedCount: 250
                                 });
                         }
                         }
@@ -1916,7 +1916,7 @@ class screen23 extends React.Component {
                         <Button3 onPress={() => {
                             this.props.navigation.navigate('twentyfourScreen',
                                 {
-                                    speedCount: 750
+                                    speedCount: 375
                                 });
                         }
                         }
@@ -1924,7 +1924,7 @@ class screen23 extends React.Component {
                         <Button4 onPress={() => {
                             this.props.navigation.navigate('twentyfourScreen',
                                 {
-                                    speedCount: 1300
+                                    speedCount: 500
                                 });
                         }
                         }
@@ -1932,7 +1932,7 @@ class screen23 extends React.Component {
                         <Button5 onPress={() => {
                             this.props.navigation.navigate('twentyfourScreen',
                                 {
-                                    speedCount: 1600
+                                    speedCount: 750
                                 });
                         }
                         }
@@ -1958,7 +1958,7 @@ class screen24 extends React.Component {
             >
 
                 <View style={styles.container}>
-                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <Text style={styles.text}>{"\n"}Modes</Text>
                     <View style={{
                         padding:10,
                         borderRadius: 6,
@@ -1975,7 +1975,7 @@ class screen24 extends React.Component {
                         <Button1 onPress={() => {
                             this.props.navigation.navigate('twentyfiveScreen',
                                 {
-                                    speedCount: 0
+                                    speedCount: 150
                                 });
                         }
                         }
@@ -1983,7 +1983,7 @@ class screen24 extends React.Component {
                         <Button2 onPress={() => {
                             this.props.navigation.navigate('twentyfiveScreen',
                                 {
-                                    speedCount: 500
+                                    speedCount: 250
                                 });
                         }
                         }
@@ -1991,7 +1991,7 @@ class screen24 extends React.Component {
                         <Button3 onPress={() => {
                             this.props.navigation.navigate('twentyfiveScreen',
                                 {
-                                    speedCount: 750
+                                    speedCount: 375
                                 });
                         }
                         }
@@ -1999,7 +1999,7 @@ class screen24 extends React.Component {
                         <Button4 onPress={() => {
                             this.props.navigation.navigate('twentyfiveScreen',
                                 {
-                                    speedCount: 1300
+                                    speedCount: 500
                                 });
                         }
                         }
@@ -2007,7 +2007,7 @@ class screen24 extends React.Component {
                         <Button5 onPress={() => {
                             this.props.navigation.navigate('twentyfiveScreen',
                                 {
-                                    speedCount: 1600
+                                    speedCount: 750
                                 });
                         }
                         }
@@ -2033,7 +2033,7 @@ class screen25 extends React.Component {
             >
 
                 <View style={styles.container}>
-                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <Text style={styles.text}>{"\n"}(13.) A mouse has _ DOF...</Text>
                     <View style={{
                         padding:10,
                         borderRadius: 6,
@@ -2050,7 +2050,7 @@ class screen25 extends React.Component {
                         <Button1 onPress={() => {
                             this.props.navigation.navigate('twentysixScreen',
                                 {
-                                    speedCount: 0
+                                    speedCount: 150
                                 });
                         }
                         }
@@ -2058,7 +2058,7 @@ class screen25 extends React.Component {
                         <Button2 onPress={() => {
                             this.props.navigation.navigate('twentysixScreen',
                                 {
-                                    speedCount: 500
+                                    speedCount: 250
                                 });
                         }
                         }
@@ -2066,7 +2066,7 @@ class screen25 extends React.Component {
                         <Button3 onPress={() => {
                             this.props.navigation.navigate('twentysixScreen',
                                 {
-                                    speedCount: 750
+                                    speedCount: 375
                                 });
                         }
                         }
@@ -2074,7 +2074,7 @@ class screen25 extends React.Component {
                         <Button4 onPress={() => {
                             this.props.navigation.navigate('twentysixScreen',
                                 {
-                                    speedCount: 1300
+                                    speedCount: 500
                                 });
                         }
                         }
@@ -2082,7 +2082,7 @@ class screen25 extends React.Component {
                         <Button5 onPress={() => {
                             this.props.navigation.navigate('twentysixScreen',
                                 {
-                                    speedCount: 1600
+                                    speedCount: 750
                                 });
                         }
                         }
@@ -2108,7 +2108,7 @@ class screen26 extends React.Component {
             >
 
                 <View style={styles.container}>
-                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <Text style={styles.text}>{"\n"}2</Text>
                     <View style={{
                         padding:10,
                         borderRadius: 6,
@@ -2125,7 +2125,7 @@ class screen26 extends React.Component {
                         <Button1 onPress={() => {
                             this.props.navigation.navigate('endScreen',
                                 {
-                                    speedCount: 0
+                                    speedCount: 150
                                 });
                         }
                         }
@@ -2133,7 +2133,7 @@ class screen26 extends React.Component {
                         <Button2 onPress={() => {
                             this.props.navigation.navigate('endScreen',
                                 {
-                                    speedCount: 500
+                                    speedCount: 250
                                 });
                         }
                         }
@@ -2141,7 +2141,7 @@ class screen26 extends React.Component {
                         <Button3 onPress={() => {
                             this.props.navigation.navigate('endScreen',
                                 {
-                                    speedCount: 750
+                                    speedCount: 375
                                 });
                         }
                         }
@@ -2149,7 +2149,7 @@ class screen26 extends React.Component {
                         <Button4 onPress={() => {
                             this.props.navigation.navigate('endScreen',
                                 {
-                                    speedCount: 1300
+                                    speedCount: 500
                                 });
                         }
                         }
@@ -2157,7 +2157,7 @@ class screen26 extends React.Component {
                         <Button5 onPress={() => {
                             this.props.navigation.navigate('endScreen',
                                 {
-                                    speedCount: 1600
+                                    speedCount: 750
                                 });
                         }
                         }
