@@ -174,34 +174,34 @@ class HomeScreen extends React.Component {
 
     render() {
         return(
-             <View style={styles.container}>
-                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
-                    <View style={{
-                        padding:10,
-                        borderRadius: 6,
-                        height:60,
-                        width: "60%",
-                        justifyContent: 'space-between',
-                        marginBottom:50,
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        shadowRadius:20,
-                        backgroundColor:'Blue',
-                        flexDirection:'row'
-                    }}>
-                        <Button onPress={() => {
-                            this.props.navigation.navigate('secondScreen',
-                                {
-                                    speedCount: 0
-                                });
-                        }
-                        }
-                                 title="start"
-                        />
-                       
-                    </View>
+            <View style={styles.container}>
+                <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                <View style={{
+                    padding:10,
+                    borderRadius: 6,
+                    height:60,
+                    width: "60%",
+                    justifyContent: 'space-between',
+                    marginBottom:50,
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    shadowRadius:20,
+                    backgroundColor:'Blue',
+                    flexDirection:'row'
+                }}>
+                    <Button onPress={() => {
+                        this.props.navigation.navigate('secondScreen',
+                            {
+                                speedCount: 0
+                            });
+                    }
+                    }
+                            title="start"
+                    />
 
                 </View>
+
+            </View>
         );
     }
 }
@@ -890,7 +890,7 @@ class screen9 extends React.Component {
             </FadeInView>
 
         );
-        
+
     }
 
 }
@@ -2191,12 +2191,12 @@ const AppNavigator = createStackNavigator(
         fifthScreen: screen5,
         sixthScreen:screen6,
         seventhScreen:screen7,
-       eighthScreen:screen8,
+        eighthScreen:screen8,
         ninthScreen:screen9,
         tenthScreen:screen10,
         ellevenScreen:screen11,
         twelveScreen:screen12,
-        
+
         thirteenScreen: screen13,
         fourteenScreen: screen14,
         fifteenScreen: screen15,
