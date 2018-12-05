@@ -175,7 +175,7 @@ class HomeScreen extends React.Component {
     render() {
         return(
              <View style={styles.container}>
-                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <Text style={styles.text}>{"\n"}There are 13 review questions. Below you will be buttons that take you to the same page but at different speeds. 1 being fastest and 5 being slowest. You don't need to try them all if you don't want to, just select whichever you want throughout.</Text>
                     <View style={{
                         padding:10,
                         borderRadius: 6,
@@ -190,7 +190,7 @@ class HomeScreen extends React.Component {
                         flexDirection:'row'
                     }}>
                         <Button onPress={() => {
-                            this.props.navigation.navigate('secondScreen',
+                            this.props.navigation.navigate('firstScreen',
                                 {
                                     speedCount: 0
                                 });
@@ -219,7 +219,7 @@ class screen1 extends React.Component {
             >
 
                 <View style={styles.container}>
-                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <Text style={styles.text}>{"\n"}(1.) The mouse was invented in the year... </Text>
                     <View style={{
                         padding:10,
                         borderRadius: 6,
@@ -299,7 +299,7 @@ class screen2 extends React.Component {
             >
 
                 <View style={styles.container}>
-                    <Text style={styles.text}>{"\n"}screen2</Text>
+                    <Text style={styles.text}>{"\n"}1963!</Text>
                     <View style={{
                         padding:10,
                         borderRadius: 6,
@@ -374,7 +374,7 @@ class screen3 extends React.Component {
             >
 
                 <View style={styles.container}>
-                    <Text style={styles.text}>{"\n"}three</Text>
+                    <Text style={styles.text}>{"\n"}(2.) Touch input is an example of...</Text>
                     <View style={{
                         padding:10,
                         borderRadius: 6,
@@ -449,7 +449,7 @@ class screen4 extends React.Component {
             >
 
                 <View style={styles.container}>
-                    <Text style={styles.text}>{"\n"}four</Text>
+                    <Text style={styles.text}>{"\n"}A dependant variable</Text>
                     <View style={{
                         padding:10,
                         borderRadius: 6,
@@ -524,7 +524,7 @@ class screen5 extends React.Component {
             >
 
                 <View style={styles.container}>
-                    <Text style={styles.text}>{"\n"}five</Text>
+                    <Text style={styles.text}>{"\n"}(3.) The definition of Saccades...</Text>
                     <View style={{
                         padding:10,
                         borderRadius: 6,
@@ -601,7 +601,7 @@ class screen6 extends React.Component {
             >
 
                 <View style={styles.container}>
-                    <Text style={styles.text}>{"\n"}six</Text>
+                    <Text style={styles.text}>{"\n"}Rapid repositioning of the eye to fixate on a new location</Text>
                     <View style={{
                         padding:10,
                         borderRadius: 6,
@@ -677,7 +677,7 @@ class screen7 extends React.Component {
             >
 
                 <View style={styles.container}>
-                    <Text style={styles.text}>{"\n"}seven</Text>
+                    <Text style={styles.text}>{"\n"}(4.) One of the following doesn't belong: Pitch,Texture,Timbre and attack</Text>
                     <View style={{
                         padding:10,
                         borderRadius: 6,
@@ -755,7 +755,7 @@ class screen8 extends React.Component {
             >
 
                 <View style={styles.container}>
-                    <Text style={styles.text}>{"\n"}eight</Text>
+                    <Text style={styles.text}>{"\n"}Timbre is NOT a property of sound like the others</Text>
                     <View style={{
                         padding:10,
                         borderRadius: 6,
@@ -830,7 +830,7 @@ class screen9 extends React.Component {
             >
 
                 <View style={styles.container}>
-                    <Text style={styles.text}>{"\n"}nine</Text>
+                    <Text style={styles.text}>{"\n"} (5.) Is Long term memory another word for working memory?</Text>
                     <View style={{
                         padding:10,
                         borderRadius: 6,
@@ -908,7 +908,7 @@ class screen10 extends React.Component {
             >
 
                 <View style={styles.container}>
-                    <Text style={styles.text}>{"\n"}10</Text>
+                    <Text style={styles.text}>{"\n"}Flase, They are opposite</Text>
                     <View style={{
                         padding:10,
                         borderRadius: 6,
@@ -983,7 +983,7 @@ class screen11 extends React.Component {
             >
 
                 <View style={styles.container}>
-                    <Text style={styles.text}>{"\n"}11</Text>
+                    <Text style={styles.text}>{"\n"}(6.) The following is the approximate reaction time for audition</Text>
                     <View style={{
                         padding:10,
                         borderRadius: 6,
@@ -1133,7 +1133,7 @@ class screen13 extends React.Component {
             >
 
                 <View style={styles.container}>
-                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <Text style={styles.text}>{"\n"}150</Text>
                     <View style={{
                         padding:10,
                         borderRadius: 6,
@@ -1283,7 +1283,7 @@ class screen15 extends React.Component {
             >
 
                 <View style={styles.container}>
-                    <Text style={styles.text}>{"\n"}start putting review questions on here about anything</Text>
+                    <Text style={styles.text}>{"\n"}1.) What year was the computer mouse invented? /n a.)1963 /nb.)1970 /n c>) 1954 </Text>
                     <View style={{
                         padding:10,
                         borderRadius: 6,
@@ -2174,7 +2174,7 @@ class LastScreen extends React.Component {
     render() {
         return(
             <View style={styles.container}>
-                <Text>Done!</Text>
+                <Text style={styles.text}>{"\n"}Done :)</Text>
             </View>
         );
     }
@@ -2272,9 +2272,9 @@ const styles = StyleSheet.create({
     title: {
         fontWeight: "bold",
         fontFamily: "monospace",
-        fontSize: 40,
+        fontSize: 10,
         color: "white",
-        marginBottom: 350,
+        marginBottom: 250,
         marginTop: 40,
         textAlign:"center",
     },
